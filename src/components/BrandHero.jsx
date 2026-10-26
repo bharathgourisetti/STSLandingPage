@@ -87,38 +87,49 @@ export default function BrandHero({ currentLang }) {
       {/* Action Buttons */}
       <div className="mt-5 space-y-2.5">
         {/* HERO BUTTON: VISIT ONLINE STORE (Redirects to sritraditionalsarees.com) */}
-        <a 
-          href={SHOP_CONFIG.onlineStoreUrl}
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group relative flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-[#7B1122] via-[#8B1E2D] to-[#991B1B] text-white shadow-md hover:shadow-xl transition-all duration-200 border-2 border-[#D4AF37] transform active:scale-[0.99]"
-        >
-          <div className="flex items-center space-x-3.5">
-            <div className="w-11 h-11 rounded-xl bg-[#590C18] border border-[#D4AF37]/50 flex items-center justify-center text-[#E5C158] shadow-inner group-hover:scale-105 transition">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-            </div>
-            <div className="text-left">
-              <div className="flex items-center space-x-1.5">
-                <span className={`${currentLang === 'te' ? 'text-[0.9rem] sm:text-[0.9125rem]' : 'text-base sm:text-lg'} font-bold font-traditional tracking-wide`}>
-                  {SHOP_CONFIG.ui.visitOnlineStore.title[langKey]}
-                </span>
-                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-[#D4AF37] text-[#422006]">
-                  {SHOP_CONFIG.ui.visitOnlineStore.tag[langKey]}
-                </span>
-              </div>
-              <p className={`${currentLang === 'te' ? 'text-[0.8rem]' : 'text-xs'} text-amber-100/90 mt-0.5`}>
-                {SHOP_CONFIG.ui.visitOnlineStore.subtitle[langKey]}
-              </p>
-            </div>
+        {SHOP_CONFIG.maintenanceMode ? (
+          <div
+            role="status"
+            className="flex min-h-16 items-center justify-center rounded-2xl border-2 border-[#D4AF37] bg-gradient-to-r from-[#7B1122] via-[#8B1E2D] to-[#991B1B] p-4 text-white shadow-md"
+          >
+            <p className="text-base font-bold font-traditional tracking-wide sm:text-lg">
+              {SHOP_CONFIG.maintenanceMessage[langKey]}
+            </p>
           </div>
-          <svg className="w-5 h-5 text-[#E5C158] group-hover:translate-x-1 transition" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </a>
+        ) : (
+          <a 
+            href={SHOP_CONFIG.onlineStoreUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-[#7B1122] via-[#8B1E2D] to-[#991B1B] text-white shadow-md hover:shadow-xl transition-all duration-200 border-2 border-[#D4AF37] transform active:scale-[0.99]"
+          >
+            <div className="flex items-center space-x-3.5">
+              <div className="w-11 h-11 rounded-xl bg-[#590C18] border border-[#D4AF37]/50 flex items-center justify-center text-[#E5C158] shadow-inner group-hover:scale-105 transition">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div className="text-left">
+                <div className="flex items-center space-x-1.5">
+                  <span className={`${currentLang === 'te' ? 'text-[0.9rem] sm:text-[0.9125rem]' : 'text-base sm:text-lg'} font-bold font-traditional tracking-wide`}>
+                    {SHOP_CONFIG.ui.visitOnlineStore.title[langKey]}
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-[#D4AF37] text-[#422006]">
+                    {SHOP_CONFIG.ui.visitOnlineStore.tag[langKey]}
+                  </span>
+                </div>
+                <p className={`${currentLang === 'te' ? 'text-[0.8rem]' : 'text-xs'} text-amber-100/90 mt-0.5`}>
+                  {SHOP_CONFIG.ui.visitOnlineStore.subtitle[langKey]}
+                </p>
+              </div>
+            </div>
+            <svg className="w-5 h-5 text-[#E5C158] group-hover:translate-x-1 transition" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        )}
 
         {/* 4 ACTION BUTTONS: WhatsApp, Call, Directions, SMS */}
         <div className="grid grid-cols-4 gap-2 pt-1">

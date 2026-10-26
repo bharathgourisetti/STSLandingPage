@@ -1,4 +1,10 @@
 export const SHOP_CONFIG = {
+  maintenanceMode: true,
+  maintenanceMessage: {
+    en: "Coming Soon",
+    te: "త్వరలో అందుబాటులోకి వస్తుంది",
+  },
+
   // Destinations
   landingPageUrl: "https://sritraditionalsarees.in", // In-store QR code standee destination
   onlineStoreUrl: "https://sritraditionalsarees.com", // Online store catalog button

@@ -77,7 +77,7 @@ export default function App() {
 
         <BrandHero currentLang={currentLang} />
 
-        <SocialMediaGrid currentLang={currentLang} />
+        {!SHOP_CONFIG.maintenanceMode && <SocialMediaGrid currentLang={currentLang} />}
 
         <ShowroomDetails 
           currentLang={currentLang}
