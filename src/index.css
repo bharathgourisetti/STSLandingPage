@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F8F4EA;
+  background-image: 
+    radial-gradient(#C59B27 0.65px, transparent 0.65px),
+    radial-gradient(#8B1E2D 0.5px, #F8F4EA 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  color: #382315;
+}
+
+html {
+  min-width: 320px;
+  background: #F8F4EA;
+}
+
+html[lang="te"] {
+  font-size: 90%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-traditional {
+  font-family: 'Cinzel', serif;
+}
+
+.font-telugu {
+  font-family: 'Noto Sans Telugu', 'Inter', sans-serif;
+}
+
+/* Multiply blends the logo's subtle parchment directly into the theme background */
+.blend-logo {
+  mix-blend-mode: multiply;
+  filter: contrast(1.08) brightness(1.02);
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
