@@ -1,8 +1,8 @@
 export const SHOP_CONFIG = {
   maintenanceMode: true,
   maintenanceMessage: {
-    en: "Coming Soon",
-    te: "త్వరలో అందుబాటులోకి వస్తుంది",
+    en: "Start's On 25th November 2026 at 9:30 AM",
+    te: "2026 నవంబర్ 25న ఉదయం 9:30కి ప్రారంభమవుతుంది",
   },
 
   // Destinations
