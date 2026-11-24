@@ -215,7 +215,7 @@ export const SHOP_CONFIG = {
     {
       id: "instagram",
       name: "Instagram",
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/sri_traditional_sarees?fqnt=MW13cHR5YXN0cDJqZw==",
       color: "#E1306C",
     },
     {
@@ -227,7 +227,7 @@ export const SHOP_CONFIG = {
     {
       id: "youtube",
       name: "YouTube",
-      url: "https://youtube.com",
+      url: "http://www.youtube.com/@SriTraditionalSarees",
       color: "#FF0000",
     },
     {
